@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mensaje de la alarma"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora (0-23)"
+        android:inputType="number"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextMinute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Minuto (0-59)"
+        android:inputType="number"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnSetAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="Establecer Alarma"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnBackToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="Volver a la página principal"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
+</LinearLayout>
