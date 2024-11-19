@@ -45,7 +45,7 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-    <!-- Segunda fila: Configurar Alarma y Abrir URL, no se tocan -->
+    <!-- Segunda fila: Configurar Alarma y Abrir URL-->
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,6 +70,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Abrir URL"
+            android:textSize="18sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white" />
+    </GridLayout>
+    <!-- Tercera fila: Juego de dados y contar chistes-->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2"
+        android:paddingTop="16dp">
+
+        <!-- Botón: Juego de dados -->
+        <Button
+            android:id="@+id/btnJuegoDados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juego Dados"
+            android:textSize="18sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Botón: contar chistes -->
+        <Button
+            android:id="@+id/btnChistes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contar Chistes"
             android:textSize="18sp"
             android:backgroundTint="@color/black"
             android:textColor="@color/white" />

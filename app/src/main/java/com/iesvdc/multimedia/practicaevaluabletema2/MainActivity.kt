@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         val btnUrl = findViewById<Button>(R.id.btnUrl)
         val btnAlarma = findViewById<Button>(R.id.btnAlarma)
         val btnPersonalizado = findViewById<Button>(R.id.btnPersonalizado)
+        val btnJuegoDados = findViewById<Button>(R.id.btnJuegoDados)
+        val btnChistes = findViewById<Button>(R.id.btnChistes)
+
 
         btnLlamada.setOnClickListener {
             startActivity(Intent(this, LlamadaActivity::class.java))
@@ -35,6 +38,16 @@ class MainActivity : AppCompatActivity() {
 
         btnPersonalizado.setOnClickListener {
             val intent = Intent(this, MensajeActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnJuegoDados.setOnClickListener {
+            val intent = Intent(this, JuegoDadosActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnChistes.setOnClickListener {
+            val intent = Intent(this, JokerActivity::class.java)
             startActivity(intent)
         }
     }
