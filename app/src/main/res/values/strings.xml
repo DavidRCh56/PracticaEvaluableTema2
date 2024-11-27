@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">PracticaEvaluableTema2</string>
-    <string name="chiste">   Esto era uno, que era tan tonto, tan tonto, tan tonto, que echó una carrera
-    el sólo y quedó segundo </string>
-    <string name="describe"> Esto dice lo que hace el boton </string>
+
+    <!-- Chistes -->
+    <string name="chiste_1">¿Por qué el libro de matemáticas se deprimió? Porque tenía demasiados problemas.</string>
+    <string name="chiste_2">Estás obsesionado con el fútbol, y yo estoy obsesionado con el fútbol. ¡Qué coincidencia! Yo también.</string>
+    <string name="chiste_3">Mi abuela tiene 6 dedos en una mano. Está bastante bien para su edad.</string>
+    <string name="chiste_4">¿Sabes qué le dice un gusano a otro gusano? ¡Voy a dar una vuelta a la manzana!</string>
+    <string name="chiste_5">El otro día me preguntaron si quería ser un hombre de éxito. Les dije que no, que prefería ser un hombre feliz.</string>
+    <string name="chiste_6">¿Cómo se llama un león con dos cabezas? ¡Un león duplicado!</string>
+    <string name="chiste_7">Estaba tan aburrido que empecé a contar los granos de arroz en el arroz con leche. Pero me quedé dormido antes de acabar.</string>
+    <string name="chiste_8">¿Sabías que el sol nunca se pone? Porque tiene miedo de la oscuridad.</string>
+    <string name="chiste_9">El tiempo vuela, pero yo soy el piloto. ¿Quién me seguirá en mi avión del aburrimiento?</string>
+    <string name="chiste_10">¿Por qué el perro se sentó frente al ordenador? Porque quería mantener su puesto en la red.</string>
+
+    <!-- Descripción del botón -->
+    <string name="describe">Este botón te hará reír con un chiste</string>
 </resources>
