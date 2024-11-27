@@ -1,65 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/white">
+    tools:context=".JuegoDadosActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton"
+    <!-- Spinner centrado -->
+    <Spinner
+        android:id="@+id/spinner_tiempo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:entries="@array/tiempos"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vaso" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_margin="24dp" /> <!-- Espacio adicional -->
 
+    <!-- RadioGroup centrado en horizontal y con opciones una al lado de la otra -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/spinner_tiempo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginBottom="24dp"> <!-- Espacio adicional -->
+
+        <RadioButton
+            android:id="@+id/radio_sumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Suma" />
+
+        <RadioButton
+            android:id="@+id/radio_ultima_tirada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Última Tirada" />
+    </RadioGroup>
+
+    <!-- CheckBox centrado -->
+    <CheckBox
+        android:id="@+id/checkBoxSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Habilitar Juego"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_marginBottom="24dp" /> <!-- Espacio adicional -->
+
+    <!-- Imagen de dado 1 centrada con separación -->
     <ImageView
         android:id="@+id/imagview_dado1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxSumar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@drawable/dado1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/dado1"
+        android:layout_marginBottom="16dp" /> <!-- Separación entre dados -->
 
+    <!-- Imagen de dado 2 centrada con separación -->
     <ImageView
         android:id="@+id/imagview_dado2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        app:layout_constraintEnd_toEndOf="@+id/imagview_dado1"
-        app:layout_constraintTop_toBottomOf="@+id/imagview_dado1"
-        app:srcCompat="@drawable/dado1" />
+        app:layout_constraintTop_toBottomOf="@id/imagview_dado1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/dado1"
+        android:layout_marginBottom="16dp" /> <!-- Separación entre dados -->
 
+    <!-- Imagen de dado 3 centrada con separación -->
     <ImageView
         android:id="@+id/imagview_dado3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        app:layout_constraintStart_toStartOf="@+id/imagview_dado2"
-        app:layout_constraintTop_toBottomOf="@+id/imagview_dado2"
-        app:srcCompat="@drawable/dado1" />
+        app:layout_constraintTop_toBottomOf="@id/imagview_dado2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/dado1"
+        android:layout_marginBottom="16dp" /> <!-- Separación entre dados -->
 
+    <!-- Texto de Resultado centrado -->
     <TextView
         android:id="@+id/txt_resultado"
-        android:layout_width="177dp"
-        android:layout_height="73dp"
-        android:text="0"
-        android:textColor="@color/black"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        app:layout_constraintTop_toBottomOf="@id/imagview_dado3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagview_dado3"
-        app:layout_constraintVertical_bias="0.511" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_marginBottom="24dp" /> <!-- Espacio adicional entre el resultado y el botón jugar -->
+
+    <!-- Botón Jugar centrado justo debajo del resultado -->
+    <Button
+        android:id="@+id/btnJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugar"
+        app:layout_constraintTop_toBottomOf="@id/txt_resultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp" /> <!-- Separación para más espacio debajo del resultado -->
+
+    <!-- Botón Volver a la página principal centrado en la parte inferior -->
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver a la Página Principal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
